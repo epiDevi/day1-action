@@ -19,3 +19,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker -v
+  docs:
+    needs: test
+    runs-on: ubunto-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker -v
+  paralell:
+    runs-on: ubunto-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker -v
